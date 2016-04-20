@@ -5,12 +5,11 @@ The Flatlanders family needs a store to sell the gems coming from their shady de
 they are evil and dangerous so you need to do a good job otherwise it is better that you start to watch your back!
 
 This simple store needs two main areas:
-The Store section to sell the gems and make money 
-The Admin section to manage the gems warehouse
+- The Store section to sell the gems and make money 
+- The Admin section to manage the gems warehouse
 
 
 ######STORE SECTION WEB API:
-
 - list and look for gems
 - Get a gem Detail info
 - Buy a Gem  (attention to the gem availability)
@@ -18,7 +17,6 @@ The Admin section to manage the gems warehouse
 
 
 ######ADMIN SECTION WEB API:  (ATTENTION....only admins can enter here)
-
 - List and look for gems
 - Add a gem
 - Update a gem
