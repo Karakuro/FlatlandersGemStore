@@ -1,4 +1,4 @@
-# FlatlandersGemStore
+# Flatlanders Gems Store
 The Flatlanders Gems store, an asp.net web.api 2 Kata
 
 The Flatlanders family needs a store to sell the gems coming from their shady dealings; 
