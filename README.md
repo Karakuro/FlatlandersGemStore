@@ -8,20 +8,19 @@ This simple store needs two main areas:
 - The Store section to sell the gems and make money 
 - The Admin section to manage the gems warehouse
 
-
-######STORE SECTION WEB API:
+######STORE SECTION PAGE:
 - list and look for gems
 - Get a gem Detail info
 - Buy a Gem  (attention to the gem availability)
-- Write a Review
+- Write a Review (optional)
 
-
-######ADMIN SECTION WEB API:  (ATTENTION....only admins can enter here)
+######ADMIN SECTION PAGE:  (ATTENTION....only admins can enter here)
 - List and look for gems
 - Add a gem
 - Update a gem
 - Publish / unpublish a gem (to make it visible on store)
 
+Note: You can start from the project from the previous lesson
 
 GOOD LUCK!
 
