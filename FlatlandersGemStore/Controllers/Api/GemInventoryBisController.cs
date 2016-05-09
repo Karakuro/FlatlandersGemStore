@@ -10,19 +10,16 @@ using FlatlandersGemStore.BL;
 
 namespace FlatlandersGemStore.Controllers.Api
 {
-    /// <summary>
-    /// Riceve le chiamate dalla Index
-    /// </summary>
-    [RoutePrefix("gem")]
-    public class GemInventoryController : ApiController
+    public class GemInventoryBisController : ApiController
     {
+        /// <summary>
+        /// Riceve le chiamate dalla About
+        /// </summary>
         public static GemInventoryManager manager;
         /// <summary>
         /// Richiede la lista completa delle gemme in vendita
         /// </summary>
         /// <returns></returns>
-        [Route("getAll")]
-        [HttpGet]
         public List<Gem> Get()
         {
             try
@@ -42,8 +39,6 @@ namespace FlatlandersGemStore.Controllers.Api
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [Route("get/{id}")]
-        [HttpGet]
         public Gem Get(string id)
         {
             try
@@ -62,40 +57,33 @@ namespace FlatlandersGemStore.Controllers.Api
         /// Registra l'arrivo di un nuovo carico di gemme
         /// </summary>
         /// <returns></returns>
-        [Route("insert")]
-        [HttpPost]
-        public bool Post()
-        {
-            try
-            {
-                if (manager == null)
-                    manager = new GemInventoryManager();
-                manager.StoreNewGems();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            return true;
-        }
+        //public bool Post()
+        //{
+        //    try
+        //    {
+        //        if (manager == null)
+        //            manager = new GemInventoryManager();
+        //        manager.StoreNewGems();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //    return true;
+        //}
 
         /// <summary>
         /// Vende (rimuovendola dall'inventario) una singola gemma
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [Route("deleteGem")]
-        [HttpPost]
-        public bool Post([FromBody] string name)
+        public bool Post([FromBody]Models.GemBuy gem)
         {
-            bool retVal = false;
             try
             {
                 if (manager == null)
                     manager = new GemInventoryManager();
-
-                retVal = manager.SellSingleGem(name);
-                return retVal;
+                return manager.SellSingleGem(gem.id);
             }
             catch (Exception ex)
             {
